@@ -38,7 +38,7 @@ npm run devServer
 1. models> CustomerService.js 可瀏覽資料結構
 2. app.js 可瀏覽api 路徑
 
-## 建議用可用 PostMan 瀏覽以下api
+## 建議用 PostMan 瀏覽以下api
 
 - get: /api/v1/customer_service
 - post: /api/v1/customer_service
