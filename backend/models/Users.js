@@ -8,7 +8,7 @@ const { Schema, model } = mongoose;
  * created_at: 建立時間
  * enable: 是否啟用
  */
-const CustomerServiceSchema = new Schema({
+const UsersSchema = new Schema({
   username: {
     type: String,
     required: [true, 'Please provide name'],
@@ -29,4 +29,4 @@ const CustomerServiceSchema = new Schema({
   },
 });
 
-export default model('CustomerService', CustomerServiceSchema);
+export default model('users', UsersSchema);

@@ -19,7 +19,7 @@ docker ps # 查看啟用的 container
 2. 安裝 MongoDB Compass 連結資料庫並新增資料庫和collection
 
 - 資料庫名稱: VueExpress
-- collection: CustomerService
+- collection: users
 
 ## 設定 env 參數
 
@@ -35,12 +35,26 @@ npm run devServer
 
 ## api 路徑、資料結構
 
-1. models> CustomerService.js 可瀏覽資料結構
+1. models> Users.js 可瀏覽資料結構
 2. app.js 可瀏覽api 路徑
 
 ## 建議用 PostMan 瀏覽以下api
 
-- get: /api/v1/customer_service
-- post: /api/v1/customer_service
-- put: /api/v1/customer_service/:id
-- deleted: /api/v1/customer_service/:id
+- get: /api/v1/users/list
+- post: /api/v1/users
+- put: /api/v1/users/:id
+- deleted: /api/v1/users/:id
+
+## 筆記
+
+___
+
+## Mongo 指令
+
+```bash
+# 更改 collection 名稱
+db.collection.renameCollection()
+
+# 刪除 collection
+db.collection.drop()
+```

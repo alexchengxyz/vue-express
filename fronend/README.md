@@ -26,7 +26,7 @@ npm run lint
 
 ## 筆記
 
-<hr>
+___
 
 ## Template Syntax
 

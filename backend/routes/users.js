@@ -5,11 +5,12 @@ import {
   addData,
   deleteData,
   updateData,
-} from '../controllers/customerService'
+} from '../controllers/users'
 
 const router = express.Router()
 
-router.route('/').get(getList).post(addData);
+router.route('/list').get(getList)
+router.route('/').post(addData);
 router.route('/:id').get(getData).put(updateData).delete(deleteData);
 
 export default router;

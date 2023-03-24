@@ -2,11 +2,11 @@
     <el-aside width="200px">
       <el-menu router default-active="2">
       <el-menu-item route="/"  index="1">
-        <el-icon><icon-menu /></el-icon>
+        <el-icon><HomeFilled /></el-icon>
         <span>首頁</span>
       </el-menu-item>
-      <el-menu-item route="/admin" index="2">
-        <el-icon><document /></el-icon>
+      <el-menu-item route="/users" index="2">
+        <el-icon><UserFilled /></el-icon>
         <span>後台帳號管理</span>
       </el-menu-item>
     </el-menu>
