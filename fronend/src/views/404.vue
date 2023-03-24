@@ -2,13 +2,11 @@
     <el-result
       icon="warning"
       title="404"
-      sub-title="Page Not Found"
+      sub-title="找不到頁面！"
       :class="$style['el-result']"
     >
       <template #extra>
-        <el-button type="primary" @click="$router.push('/')">
-          Back
-        </el-button>
+        <el-button type="primary" @click="$router.push('/')">回到首頁</el-button>
       </template>
     </el-result>
 </template>

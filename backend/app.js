@@ -1,7 +1,7 @@
 import express from 'express';
 import dotenv from 'dotenv';
 import connectDB from './db/connect.js';
-import customerService from './routes/CustomerService.js';
+import users from './routes/users.js';
 import notFound  from './middleware/not-found.js';
 import errorHandler from  './middleware/error-handler.js';
 
@@ -15,7 +15,7 @@ app.use(express.static('./public'));
 app.use(express.json());
 
 // api
-app.use('/api/v1/customer_service', customerService);
+app.use('/api/v1/users', users);
 
 app.use(notFound);
 app.use(errorHandler);

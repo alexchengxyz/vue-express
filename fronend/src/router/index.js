@@ -13,11 +13,11 @@ const routes = [
     },
   },
   {
-    path: '/admin',
-    name: 'admin',
+    path: '/users',
+    name: 'users',
     components: {
       Sidebar,
-      Main: () => import('@/views/Admin.vue')
+      Main: () => import('@/views/Users.vue')
     }
   },
   {

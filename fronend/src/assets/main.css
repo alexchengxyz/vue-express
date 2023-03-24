@@ -11,14 +11,6 @@ body {
   padding: 0;
 }
 
-/* @media (min-width: 1024px) {
-  body {
-    display: flex;
-    place-items: center;
-  }
-
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
-} */
+.el-pagination {
+  margin-top: 1rem;
+}
