@@ -1,6 +1,6 @@
 <script setup>
 import { onMounted, ref, watch } from 'vue';
-import dayjs from 'dayjs'
+import dayjs from 'dayjs';
 import request from '@/utils/request.js';
 import DeleteDialog from '@/components/DeleteDialog.vue';
 import EditDialog from '@/components/EditDialog.vue';
@@ -16,7 +16,7 @@ const initDialogData = {
 const loading = ref(false);
 const data = ref([]);
 const dialogData = ref(initDialogData);
-//pagination
+// pagination
 const currentPage = ref(1);
 const pageSize = ref(20);
 const pageTotal = ref(0);

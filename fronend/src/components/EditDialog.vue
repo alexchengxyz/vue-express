@@ -1,5 +1,5 @@
 <script setup>
-import { defineEmits, ref, computed, watch } from 'vue';
+import { defineEmits, ref, watch } from 'vue';
 import { cloneDeep } from 'lodash';
 
 const props = defineProps({

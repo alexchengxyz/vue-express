@@ -1,7 +1,7 @@
 <template>
-    <el-aside width="200px">
-      <el-menu router default-active="2">
-      <el-menu-item route="/"  index="1">
+  <el-aside width="200px">
+    <el-menu router default-active="2">
+      <el-menu-item route="/" index="1">
         <el-icon><HomeFilled /></el-icon>
         <span>首頁</span>
       </el-menu-item>
@@ -15,7 +15,7 @@
     <!-- <router-link custom to="/about" v-slot="{ href, navigate }">
       <el-link type="primary" :href="href" @click="navigate">關於我們</el-link>
     </router-link> -->
-    </el-aside>
+  </el-aside>
 </template>
 
 <style scoped>
