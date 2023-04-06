@@ -1,7 +1,8 @@
 <script setup>
 import { onMounted, ref, watch } from 'vue';
+import { useLoadingStore } from '@/stores/loading';
 import dayjs from 'dayjs';
-import request from '@/utils/request.js';
+import request from '@/utils/request';
 import DeleteDialog from '@/components/DeleteDialog.vue';
 import EditDialog from '@/components/EditDialog.vue';
 
@@ -12,8 +13,9 @@ const initDialogData = {
   enable: true,
 };
 
+const loadingStore = useLoadingStore();
+
 // State
-const loading = ref(false);
 const data = ref([]);
 const dialogData = ref(initDialogData);
 // pagination
@@ -43,7 +45,7 @@ const getUserList = async () => {
     qs.order = order.value;
   }
 
-  loading.value = true;
+  loadingStore.main = true;
 
   const out = await request('GET', '/api/v1/users/list', qs);
 
@@ -59,7 +61,7 @@ const getUserList = async () => {
     pageTotal.value = out.pagination.total;
   }
 
-  loading.value = false;
+  loadingStore.main = false;
 }
 
 /**
@@ -211,13 +213,13 @@ onMounted(() => {
     <h1>後台帳號管理</h1>
     <el-row>
       <el-col :span="24" align="right">
-        <el-button plain type="primary" @click="openEditDialog()">新增會員</el-button>
+        <el-button type="primary" @click="openEditDialog()">新增會員</el-button>
       </el-col>
     </el-row>
     <el-table
       border
       :default-sort="{ prop: 'createAt', order: 'descending' }"
-      v-loading="loading"
+      v-loading="loadingStore.main"
       :data="data"
       @sort-change="handleSort"
       style="width: 100%; margin-top: 1rem"
@@ -252,7 +254,7 @@ onMounted(() => {
 
     <el-pagination
       background
-      v-loading="loading"
+      v-loading="loadingStore.main"
       v-model:current-page="currentPage"
       v-model:page-size="pageSize"
       :page-sizes="[20, 30, 40, 50]"

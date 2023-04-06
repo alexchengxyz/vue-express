@@ -1,6 +1,6 @@
 <template>
   <el-aside width="200px">
-    <el-menu router default-active="2">
+    <el-menu router default-active="1">
       <el-menu-item route="/" index="1">
         <el-icon><HomeFilled /></el-icon>
         <span>首頁</span>

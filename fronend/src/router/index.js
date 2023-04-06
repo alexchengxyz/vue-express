@@ -8,7 +8,7 @@ const routes = [
     path: '/',
     name: 'home',
     components: {
-      SidebarItem,
+      Sidebar: SidebarItem,
       Main: Home,
     },
   },
@@ -16,7 +16,7 @@ const routes = [
     path: '/users',
     name: 'users',
     components: {
-      SidebarItem,
+      Sidebar: SidebarItem,
       Main: () => import('@/views/Users.vue')
     },
   },
