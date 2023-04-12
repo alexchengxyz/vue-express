@@ -1,5 +1,4 @@
-<template>
-  <main>
-    <h1>首頁</h1>
-  </main>
+<template lang="pug">
+main
+  h1 首頁
 </template>

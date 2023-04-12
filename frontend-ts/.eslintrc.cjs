@@ -9,6 +9,7 @@ module.exports = {
     'plugin:vue/vue3-essential',
     'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended',
+    'plugin:vue-pug/vue3-recommended',
   ],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -33,5 +34,6 @@ module.exports = {
     }],
     'object-curly-newline': ['off', 'never'], // 大括號內是否准許不必要的空格
     'no-underscore-dangle': 'off', // 不能以_開頭會結尾
+    'no-restricted-syntax': ['error', 'FunctionExpression', 'WithStatement', "BinaryExpression[operator='in']"],
   },
 };

@@ -14,5 +14,18 @@ export default defineConfig({
     modules: {
       localsConvention: 'camelCase',
     },
+    preprocessorOptions: {
+      scss: {
+        additionalData: '@import "@/assets/scss/main.scss";',
+      },
+    },
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'http://localhost:8000/',
+        changeOrigin: true,
+      },
+    },
   },
 });
